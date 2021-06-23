@@ -48,81 +48,6 @@ select, input, textarea, button {
     padding: 0 15px;
 }
 
-.description {
-    font-size: 18px;
-    width: 600px;
-    text-align: center;
-    margin: 0 auto;
-    line-height: 30px;
-    margin-bottom: 100px;
-}
-
-.menu {
-    background-color: #FFD7D0;
-    display: flex;
-    justify-content: center;
-}
-
-.menu__item {
-    display: flex;
-    padding: 14px 50px;
-    cursor: pointer;
-    height: 100%;
-}
-
-.menu__item:hover {
-    background: #f0c7c0;
-    text-decoration: none;
-}
-
-header {
-    margin-bottom: 50px
-}
-
-header .container .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header .header img {
-    width: 100%;
-    max-width: 500px;
-}
-header .header h1 {
-    font-size: 18px;
-}
-header .header .request-button {
-    margin-top: 50px;
-    width: 320px;
-}
-
-.how {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.how__item {
-    display: flex;
-    align-items: center;
-    flex: 1 1 30%;
-    padding: 25px;
-}
-
-.how__item img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-right: 10px;
-}
-
-.list-container .container {
-    flex-direction: column;
-    justify-content: center;
-}
-
 .section-title {
     text-align: center;
     font-size: 38px;
@@ -172,23 +97,97 @@ header .header .request-button {
     padding: 15px 0;
 }
 
+.header {
+    height: 110px;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    height: 100%;
+    flex: 0.2;
+    object-fit: contain;
+}
+
+.header__navbar {
+    flex: 0.8;
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    header: 100%;
+    justify-content: flex-end;
+}
+
+.navbar__item {
+    margin: 0 25px;
+}
+
+.carousel-item .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.carousel-item__image {
+    flex: 0.4;
+    margin-left: 100px;
+}
+
+.carousel-item__image img {
+    width: 100% !important;
+    object-fit: contain !important;
+}
+
+.carousel-item__info {
+    flex: 0.6;
+}
+
+.carousel-item__info--title {
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 50px;
+}
+
+.carousel-item__info__action {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.carousel-item__info__action--price {
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.carousel-item__info__action .promo-button {
+    padding: 25px 100px;
+}
+
 .catalog {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .catalog__item {
-    flex: 1;
-    flex-basis: 30%;
-    min-width: 250px;
+    /* flex: 1; */
+    flex-basis: 350px;
     display: flex;
     flex-direction: column;
     padding: 0 25px;
-    /* border-radius: 10px; */
+    margin-bottom: 50px;
 }
 .catalog__item__image {
     width: 100%;
+    height: 250px;
+    object-fit: contain;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .catalog__item__info {
@@ -197,6 +196,7 @@ header .header .request-button {
     box-shadow: 0 5px 15px rgb(0 0 0 / 5%);
     border-radius: 10px;
     padding: 20px 0;
+    min-height: 570px;
     color: #5f6c77;
     transition: .2s;
     cursor: pointer;
@@ -237,6 +237,7 @@ header .header .request-button {
 
 .catalog__item__info .promo-button {
     margin: 0 20px;
+    margin-top: auto;
     padding: 20px 0;
     box-shadow: 0 2px 0 0 #135cc5, 0 5px 15px 2px rgb(7 86 195 / 27%), inset 0 8px 30px 0 rgb(255 255 255 / 30%);
 }
@@ -249,10 +250,12 @@ header .header .request-button {
 
 .calculate-form {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .calculate-form__col {
-    flex-basis: 33%;
+    flex: 1;
+    flex-basis: 350px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -453,9 +456,8 @@ select::focus .select::before {
 }
 
 .portfolio__item {
-    min-width: 630px;
-    flex-basis: 50%;
     flex: 1;
+    flex-basis: 50%;
     height: 500px;
     cursor: pointer;
     position: relative;
@@ -736,6 +738,13 @@ footer {
 .prev-element:hover, .next-element:hover {
     color: #fff;
 }
+
+@media screen and (max-width: 1205px) {
+    .header__navbar {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .container {
         width: 80%;
@@ -751,12 +760,23 @@ footer {
         margin-bottom: 50px;
         max-width: 350px;
     }
+
+    .portfolio {
+    }
+
+    .portfolio__item {
+        flex-basis: 100%;
+    }
 }
 
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
     .container {
         width: 768px;
+    }
+
+    .portfolio__item {
+        height: 350px;
     }
 }
 
@@ -767,90 +787,24 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-    .description {
-        width: 100%;
-        padding: 0 25px;
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    .button-up {
-        transition: .5s;
-        position: fixed;
-        bottom: 5vh;
-        right: -100px;
-        color: #DF7C7D;
-        padding: 5px 15px;
-        font-size: 16px;
-        border: 1px solid #DF7C7D;
-        background: #fff;
-        animation: move-up-down 1.5s ease-in infinite;
-    }
+ 
 }
 
 @media screen and (max-width: 450px) {
-    .delivery__list, .delivery__sub-description  {
-        width: 100%;
-        padding: 0 15px;
-    }
 }
 @media screen and (max-width: 600px) {
 
-    .header img {
-        margin-top: 50px
-    }
-    
     .container {
         width: 100%;
         padding: 0 10px;
     }
-
-    .how__item {
-        flex: 1 1 100%;
-    }
-
-    .request-button {
-        width: 90% !important;
-    }
-
-    .nav {
-        display: none;
-    }
-
-    .burger-button {
-        display: flex;
-    }
-
-    .footer__contacts, .delivery {
-        font-size: 18px;
-    }
 }
 
 @media screen and (max-width: 960px) {
-    .menu {
-        flex-direction: column;
-    }
 }
 
 @media screen and (max-width: 800px) {
-    .delivery__item {
-        flex-direction: column;
-        line-height: 30px;
-        font-size: 18px;
-    }
 
-    .delivery__item span:last-child {
-        font-weight: bold;
-    }
-
-    .splide__slide {
-        height: 500px;
-    }
-
-    .splide__slide img {
-        object-fit: cover;
-        height: 100%;
-    }
 }
 
 @media screen and (min-width: 600px) {
@@ -871,9 +825,5 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
-    .form__recall {
-        font-size: 12px;
-        margin-top: 15px;
-        color: #636363
-    }
+
 }

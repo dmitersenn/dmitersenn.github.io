@@ -10,25 +10,104 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <header></header>
-    <section class="hot">
-        <!-- <div class="splide">
+    <header class="header">
+        <img class="header__logo" src="/assets/img/logo.png" alt="логотип">
+        <nav class="header__navbar">
+            <ul class="navbar">
+                <li class="navbar__item">
+                    <a href="#main">Главная</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#products">Товары</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#calc">Установка сплит-систем</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#tariffs">Тарифы</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#portfolio">Портфолио</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#contacts">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div
+        class="burger-button navbar-button" 
+        onclick="toggleNavbar()">
+            <img class="burger-button--open" src="/assets/img/icons/phone.svg">
+            <img class="burger-button--close" style="display: none" src="/assets/img/icons/close.svg">
+        </div>
+    </header>
+    <section id="main" class="hot">
+        <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide">
-                        
+                    <li class="splide__slide carousel-item">
+                        <div class="container">
+                            <div class="carousel-item__info">
+                                <h3 class="carousel-item__info--title">
+                                    Инверторная сплит-система Royal Clima RCI-TN38HN серия TRIUMPH Inverter
+                                </h3>
+                                <p class="carousel-item__info--description">
+                                    Серия TRIUMPH представлена пятью моделями от 08 до 26 kBTU. Улучшенная форма крыльчатки вентилятора и оптимизация воздушного канала позволили снизить уровень шума внутреннего блока до 25 дБ(А). Управляются кондиционеры с помощью уникального эргономичного пульта, при разработке которого была использована абсолютно новая концепция размещения управляющих кнопок, они расположены не только на лицевой, но и на боковой поверхности.
+                                    Во кондиционерах серии TRIUMPH реализована функция 3D AUTO AIR — возможность устанавливать максимально комфортное направление потока воздуха, управляя положением горизонтальных и вертикальных жалюзи.
+                                </p>
+                                <div class="carousel-item__info__action">
+                                    <button class="promo-button">Купить</button>
+                                    <div class="carousel-item__info__action--price">87 899 руб.</div>
+                                </div>
+                            </div>
+                            <div class="carousel-item__image">
+                                <img src="/assets/img/carousel/1.webp">
+                            </div>
+                        </div>
                     </li>
-                    <li class="splide__slide">
-                        
+                    <li class="splide__slide carousel-item">
+                        <div class="container">
+                            <div class="carousel-item__info">
+                                <h3 class="carousel-item__info--title">
+                                    Сплит-система Hisense AS-11UR4SYDDB15
+                                </h3>
+                                <p class="carousel-item__info--description">
+                                    Сплит-система настенного типа Hisense AS – инверторный кондиционер с классическим дизайном внутреннего блока, имеющего матовую поверхность лицевой панели. Благодаря сочетанию передовых европейских разработок, данная сплит-система сохраняет высокую эффективность работы во всех режимах при уличной температуре до -15°С.
+                                </p>
+                                <div class="carousel-item__info__action">
+                                    <button class="promo-button">Купить</button>
+                                    <div class="carousel-item__info__action--price">43 500 руб.</div>
+                                </div>
+                            </div>
+                            <div class="carousel-item__image">
+                                <img src="/assets/img/carousel/2.png">
+                            </div>
+                        </div>
                     </li>
-                    <li class="splide__slide">
-                        
+                    <li class="splide__slide carousel-item">
+                        <div class="container">
+                            <div class="carousel-item__info">
+                                <h3 class="carousel-item__info--title">
+                                    Haier PEARL On/Off HSU-09HPL03/R3
+                                </h3>
+                                <p class="carousel-item__info--description">
+                                    Сплит-система Haier Pearl содержит компактный внутренний блок с белоснежным исполнением. С помощью режимов и пульта ДУ можно оптимальным образом настроить работы системы по желанию владельца. На панели устройства размещен очень удобный скрытый дисплей, предоставляющий полную информацию о процессе эксплуатации. Блок работает с уменьшенным уровнем производимого шума и имеет комфортное современное управление.
+                                </p>
+                                <div class="carousel-item__info__action">
+                                    <button class="promo-button">Купить</button>
+                                    <div class="carousel-item__info__action--price">59 999 руб.</div>
+                                </div>
+                            </div>
+                            <div class="carousel-item__image">
+                                <img src="/assets/img/carousel/3.png">
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
-        </div> -->
+        </div>
     </section>
-    <section class="catalog-container">
+    <section class="catalog-container" id="products">
         <div class="container">
             <h2 class="section-title">Выбор покупателей</h2>
             <div class="catalog">
@@ -57,20 +136,20 @@
                 <div class="catalog__item">
                     <img
                     class="catalog__item__image"
-                    src="/assets/img/catalog/1.webp"
+                    src="/assets/img/catalog/2.webp"
                     alt="сплит-система">
                     <div class="catalog__item__info">
                         <div class="catalog__item__info--price">
-                            22 600 руб.
+                            21 500 руб.
                         </div>
                         <div class="catalog__item__info--title">
-                            СПЛИТ-СИСТЕМА FUNAI RAC-SM20HP.D03
+                            СПЛИТ-СИСТЕМА LESSAR LS-H09KPA2/LU-H09KPA2
                         </div>
                         <div class="catalog__item__info--description">
-                            <span class="catalog__item__info--description__item">- Площадь обслуживания до 20 м2</span>
-                            <span class="catalog__item__info--description__item">- Уровень шума 20 Дб</span>
-                            <span class="catalog__item__info--description__item">- 4 сменных фильтра в комплекте</span>
+                            <span class="catalog__item__info--description__item">- Площадь обслуживания до 25 м2</span>
+                            <span class="catalog__item__info--description__item">- Уровень шума 26 Дб</span>
                             <span class="catalog__item__info--description__item">- Гарантия 4 года </span>
+                            <span class="catalog__item__info--description__item">- Японский компрессор</span>
                             <span class="catalog__item__info--description__item">- Стандартный монтаж в подарок</span>
                         </div>
                         <button class="promo-button">Купить</button>
@@ -79,20 +158,152 @@
                 <div class="catalog__item">
                     <img
                     class="catalog__item__image"
-                    src="/assets/img/catalog/1.webp"
+                    src="/assets/img/catalog/3.webp"
                     alt="сплит-система">
                     <div class="catalog__item__info">
                         <div class="catalog__item__info--price">
-                            22 600 руб.
+                            24 290 руб.
                         </div>
                         <div class="catalog__item__info--title">
-                            СПЛИТ-СИСТЕМА FUNAI RAC-SM20HP.D03
+                            СПЛИТ-СИCТЕМА TOSOT NATAL 2021 T07H-SNN/I/T07H-SNN/O
                         </div>
                         <div class="catalog__item__info--description">
                             <span class="catalog__item__info--description__item">- Площадь обслуживания до 20 м2</span>
                             <span class="catalog__item__info--description__item">- Уровень шума 20 Дб</span>
-                            <span class="catalog__item__info--description__item">- 4 сменных фильтра в комплекте</span>
-                            <span class="catalog__item__info--description__item">- Гарантия 4 года </span>
+                            <span class="catalog__item__info--description__item">- Гарантия 4 года</span>
+                            <span class="catalog__item__info--description__item">- Функция iFeel</span>
+                            <span class="catalog__item__info--description__item">- Стандартный монтаж в подарок</span>
+                        </div>
+                        <button class="promo-button">Купить</button>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <img
+                    class="catalog__item__image"
+                    src="/assets/img/catalog/4.webp"
+                    alt="сплит-система">
+                    <div class="catalog__item__info">
+                        <div class="catalog__item__info--price">
+                            29 900 руб.
+                        </div>
+                        <div class="catalog__item__info--title">
+                            ИНВЕРТОРНАЯ СПЛИТ-СИСТЕМА LESSAR LS-HE07KRA2/LU-HE07KRA2
+                        </div>
+                        <div class="catalog__item__info--description">
+                            <span class="catalog__item__info--description__item">- Площадь обслуживания до 20 м2</span>
+                            <span class="catalog__item__info--description__item">- Антикоррозийное покрытие Golden Fin</span>
+                            <span class="catalog__item__info--description__item">- Уровень шума 26 Дб</span>
+                            <span class="catalog__item__info--description__item">- Гарантия 4 года</span>
+                            <span class="catalog__item__info--description__item">- Стандартный монтаж в подарок</span>
+                        </div>
+                        <button class="promo-button">Купить</button>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <img
+                    class="catalog__item__image"
+                    src="/assets/img/catalog/5.webp"
+                    alt="сплит-система">
+                    <div class="catalog__item__info">
+                        <div class="catalog__item__info--price">
+                            41 420 руб.
+                        </div>
+                        <div class="catalog__item__info--title">
+                            ИНВЕРТОРНАЯ СПЛИТ-СИСТЕМА TOSHIBA RAS-10J2KVG-EE /RAS-10J2AVG-EE
+                        </div>
+                        <div class="catalog__item__info--description">
+                            <span class="catalog__item__info--description__item">- Площадь обслуживания до 25 м2</span>
+                            <span class="catalog__item__info--description__item">- Уровень шума 21 Дб</span>
+                            <span class="catalog__item__info--description__item">- Гарантия 3 года</span>
+                            <span class="catalog__item__info--description__item">- Самоотчистка</span>
+                            <span class="catalog__item__info--description__item">- Энергоэффективность А++</span>
+                        </div>
+                        <button class="promo-button">Купить</button>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <img
+                    class="catalog__item__image"
+                    src="/assets/img/catalog/6.webp"
+                    alt="сплит-система">
+                    <div class="catalog__item__info">
+                        <div class="catalog__item__info--price">
+                            18 990 руб.
+                        </div>
+                        <div class="catalog__item__info--title">
+                            СПЛИТ-СИСТЕМА QUATTROCLIMA QV-BE07WA/QN-BE07WA
+                        </div>
+                        <div class="catalog__item__info--description">
+                            <span class="catalog__item__info--description__item">- Компактный размер</span>
+                            <span class="catalog__item__info--description__item">- Площадь обслуживания до 20 м2</span>
+                            <span class="catalog__item__info--description__item">- Уровень шума 26 Дб</span>
+                            <span class="catalog__item__info--description__item">- Гарантия 3 года</span>
+                            <span class="catalog__item__info--description__item">- Стандартный монтаж в подарок</span>
+                        </div>
+                        <button class="promo-button">Купить</button>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <img
+                    class="catalog__item__image"
+                    src="/assets/img/catalog/7.webp"
+                    alt="сплит-система">
+                    <div class="catalog__item__info">
+                        <div class="catalog__item__info--price">
+                            34 500 руб.
+                        </div>
+                        <div class="catalog__item__info--title">
+                            ИНВЕРТОРНАЯ СПЛИТ-СИСТЕМА TOSOT T07H-SLYI/I/T07H-SLYI/O
+                        </div>
+                        <div class="catalog__item__info--description">
+                            <span class="catalog__item__info--description__item">- Площадь обслуживания до 20 м2</span>
+                            <span class="catalog__item__info--description__item">- Уровень шума 24 Дб</span>
+                            <span class="catalog__item__info--description__item">- Гарантия 4 года</span>
+                            <span class="catalog__item__info--description__item">- Стандартный монтаж в подарок</span>
+                            <span class="catalog__item__info--description__item">- Плазменная очистка воздуха</span>
+                        </div>
+                        <button class="promo-button">Купить</button>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <img
+                    class="catalog__item__image"
+                    src="/assets/img/catalog/8.webp"
+                    alt="сплит-система">
+                    <div class="catalog__item__info">
+                        <div class="catalog__item__info--price">
+                            53 000 руб.
+                        </div>
+                        <div class="catalog__item__info--title">
+                            ИНВЕРТОРНАЯ СПЛИТ-СИСТЕМА HAIER AS09NS4ERA /1U09BS3ERA GOLD 
+                        </div>
+                        <div class="catalog__item__info--description">
+                            <span class="catalog__item__info--description__item">- Площадь обслуживания до 25 м2</span>
+                            <span class="catalog__item__info--description__item">- Уровень шума 20 Дб</span>
+                            <span class="catalog__item__info--description__item">- Гарантия 3 года</span>
+                            <span class="catalog__item__info--description__item">- 3 цвета внутреннего блока</span>
+                            <span class="catalog__item__info--description__item">- Стандартный монтаж в подарок</span>
+                        </div>
+                        <button class="promo-button">Купить</button>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <img
+                    class="catalog__item__image"
+                    src="/assets/img/catalog/9.webp"
+                    alt="сплит-система">
+                    <div class="catalog__item__info">
+                        <div class="catalog__item__info--price">
+                            41 990 руб.
+                        </div>
+                        <div class="catalog__item__info--title">
+                            ИНВЕРТОРНАЯ СПЛИТ-СИСТЕМА PANASONIC CS-BE20TKD/CU-BE20TKD
+                        </div>
+                        <div class="catalog__item__info--description">
+                            <span class="catalog__item__info--description__item">- Площадь обслуживания до 20 м2</span>
+                            <span class="catalog__item__info--description__item">- Уровень шума 20 Дб</span>
+                            <span class="catalog__item__info--description__item">- Таймер</span>
+                            <span class="catalog__item__info--description__item">- Гарантия 5 лет</span>
                             <span class="catalog__item__info--description__item">- Стандартный монтаж в подарок</span>
                         </div>
                         <button class="promo-button">Купить</button>
@@ -101,7 +312,7 @@
             </div>
         </div>
     </section>
-    <section class="form-container">
+    <section class="form-container" id="calc">
         <div class="container">
             <h2 class="section-title">Рассчитайте стоимость установки прямо сейчас</h2>
             <form class="calculate-form">
@@ -193,7 +404,7 @@
             </div>
         </div>
     </section>
-    <section class="tariff-container">
+    <section class="tariff-container" id="tariffs">
         <div class="container">
             <h2 class="section-title">Тарифы на установку</h2>
             <div class="table">
@@ -232,7 +443,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio-container">
+    <section class="portfolio-container" id="portfolio">
         <h2 class="section-title">Наши работы</h2>
         <div class="portfolio">
             <div class="portfolio__item">
@@ -294,7 +505,7 @@
             </div>
         </div>
     </section>
-    <div class="map-container">
+    <div class="map-container" id="contacts">
         <div class="map-container__info">
             <a href="tel:+79282575290">+7 (918) 257-52-90</a>
             <a href="mailto:buketyrostov@yandex.ru">klimatpluskrd@mail.ru</a>
@@ -318,6 +529,42 @@
     <footer>
         © Климат.Плюс 2018-2020
     </footer>
+    <div class="popup-container mobile-menu">
+        <nav class="mobile-nav">
+            <div class="nav__item">
+                <a class="instagram" href="https://www.instagram.com/buketovo_rostov/?hl=ru">
+                    <img src="/assets/img/icons/inst-anim.gif" alt="Инстаграм">
+                </a>
+            </div>
+            <a class="tel" href="tel:+79181114144">+7(918) 111 41 44</a>
+            <button class="request-button">
+                Заказать звонок
+            </button>
+        </nav>
+    </div>
+    <div class="popup-container request-form">
+        <div
+        class="burger-button" 
+        onclick="toggleForm('close')">
+            <img class="burger-button--close" style="display: none" src="/assets/img/icons/close.svg">
+        </div>
+        <div class="popup-content">
+            <form class="send-form" method="POST">
+                <label>
+                    Как вас зовут?
+                    <input name="name" placeholder="Введите ваше имя...">
+                </label>
+                <label>
+                    Номер телефона
+                    <input name="phone" class="tel-input" placeholder="Введите номер телефона...">
+                </label>
+                <button class="request-button send-button">Отправить</button>
+                <div class="error"></div>
+                <span class="form__recall">Перезвоним вам через 30 секунд</span>
+                <span class="form__privacy">Нажимая на кнопку отправить, я даю согласие на обработку <a href="assets/privacy.rtf" target="_blank">персональных данных.</a></span>
+            </form>
+        </div>
+    </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
